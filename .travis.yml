@@ -11,12 +11,12 @@ install:
   - pip install python-for-android kivy
 
 script:
-  - p4a apk --private ./ --package org.example.scanner --name MyScannerApp --version 0.1 --requirements kivy,opencv-python-headless,pytesseract
+  - p4a apk --private ./ --package org.example.scanner --name scaner --version 0.3 --requirements kivy,opencv-python-headless,pytesseract
 
 deploy:
   provider: releases
-  api_key: $GITHUB_TOKEN
-  file: path/to/your_apk_file.apk
+  api_key: $GITHUB_TOKEN_APP
+  file: build/outputs/apk/release/scaner-releasev0.3.apk
   skip_cleanup: true
   on:
     tags: true
